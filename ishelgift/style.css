@@ -1,0 +1,105 @@
+body {
+    background-color: #FF5A5A;
+    height: 100%;
+    font-family: 'tradegothiclt-bold', sans-serif;
+  }
+  
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+  }
+  
+  p {
+    display: inline-block;
+    color: white;
+    font-size: 50px;
+  }
+  
+  input {
+    height: 70px;
+    font-size: 50px;
+    border: solid 2px #fff;
+    border-radius: 5px;
+    margin: 0 0 40px 0;
+    padding: 10px 15px;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-content;
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  button {
+    border-radius: 5px;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: #fff;
+    color: #FF5A5A;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  h1 {
+    position: relative;
+    opacity: 0;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 40px;
+    transition: opacity .3s ease-in;
+  }
+  
+  span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  img {
+    position: absolute;
+    right: 30px;
+    height: 70%;
+    z-index: -1;
+    animation: floatup 5s infinite;
+  }
+  
+  .play main {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  
+  .play h1 {
+    opacity: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    main {
+      flex-direction: row;
+    }
+    input {
+      text-align: left;
+      margin: 0 30px;
+    }
+    h1 {
+      font-size: 5em;
+    }
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes floatup {
+    from {
+      bottom: -70%;
+    }
+    to {
+      bottom: 120%;
+    }
+  }
